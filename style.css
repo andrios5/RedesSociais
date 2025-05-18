@@ -76,13 +76,12 @@ section#redeSociais img:hover {
 
 @media screen and (max-width: 500px) {
 
-    #redeSociais {
-        position: absolute;
-        bottom: 0%;
+    #container {
+        bottom: 1%;
     }
 
     section#redeSociais img {
-        width: 10%;
+        width: 50px;
         margin: 5px;
     }
 
