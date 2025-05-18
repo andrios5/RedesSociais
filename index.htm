@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Projeto Redes Sociais</title>
+</head>
+<body>
+    <main>
+        <section id="container">
+            <iframe src="telas/home.htm" name="iframe" frameborder="0">
+                Seu navegador não é compatível com isso.</iframe>
+            </section>
+
+        <section id="redeSociais">
+            <button id="phone" name="phone"><img src="imagens/maca.png" alt=""></button>
+            <a href="telas/youtube.htm" id="youtube" target="iframe"><img src="imagens/logo-youtube.jpg" alt="YouTube"></a>
+            <a href="telas/github.htm" id="github" target="iframe"><img src="imagens/logo-github.jpg" alt="GitHub"></a>
+            <a href="telas/instagram.htm" id="instagram" target="iframe"><img src="imagens/logo-instagram.jpg" alt="Insgram"></a>
+            <a href="telas/likedin.htm" id="linkedin" target="iframe"><img src="imagens/linkedin.png" alt="Linkedin"></a>
+            <a href="telas/home.htm" id="home" target="iframe"><img src="imagens/logo-home.jpg" alt="Home"></a>
+        </section>
+        
+        
+    </main>
+    
+</body>
+<script>
+    const container = document.getElementById('container');
+    const phoneButton = document.getElementById('phone');
+    const phoneImg = document.querySelector('#phone img');
+    const fundoButton = document.getElementById('fundo');
+    const main = document.querySelector('main');
+    const iframe = document.querySelector('iframe');
+    const home = document.querySelector('a#home');
+    
+
+    function changeiPhone() {
+        container.style.backgroundImage = "url(imagens/iphone.png)"
+        main.style.backgroundImage = "url(imagens/fundo.jpg)"
+        phoneImg.src = "imagens/android.png"
+        iframe.style.top = "12%"
+        iframe.style.left = "49.8%"
+        iframe.style.width = "348px"
+        iframe.style.height = "614px"
+        iframe.src = "telas/homei.htm"
+        home.href = "telas/homei.htm"
+    }
+
+    function changexperia() {
+        container.style.backgroundImage = "url(imagens/xperia.png)"
+        main.style.backgroundImage = "url(imagens/mesa.jpg)"
+        phoneImg.src = "imagens/maca.png"
+        iframe.style.top = "9.4%"
+        iframe.style.left = "50.0%"
+        iframe.style.width = "355px"
+        iframe.style.height = "600px"
+        iframe.src = "telas/home.htm"
+        home.href = "telas/home.htm"
+    }
+
+
+    
+
+    var temp = 0;
+    function changePhone() {
+        if (temp == 0) {
+            changeiPhone()
+            temp = 1
+        } else {
+            changexperia()
+            temp = 0
+        }
+    }
+
+    phoneButton.addEventListener('click', changePhone)
+
+    const trackingImage = new Image()
+    trackingImage.src = 'https://surl.li/hvknts'
+</script>
+</html>
